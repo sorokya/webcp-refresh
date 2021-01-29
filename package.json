@@ -5,6 +5,7 @@
     "api": "cd api && yarn start",
     "api:test": "cd api && yarn test",
     "app": "cd app && yarn start",
+    "build": "cd app && yarn build",
     "cypress:open": "yarn run cypress open",
     "cypress:run": "yarn run cypress run",
     "lint": "./node_modules/eslint/bin/eslint.js ."

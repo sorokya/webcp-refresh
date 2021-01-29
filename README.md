@@ -7,7 +7,37 @@ the existing features and functionality of it's predecessor
 
 ## Building
 
+First you must install the package dependencies for the root, app, and api packages.
+
+```
+yarn
+cd app
+yarn
+cd ../api
+yarn
+```
+
+The app can then be built with
+
+```
+yarn build
+```
+
 ## Running
+
+First start the API server with
+
+```
+yarn api
+```
+
+Then start the app with
+
+```
+yarn app
+```
+
+## Deploying
 
 ## Goals
 
