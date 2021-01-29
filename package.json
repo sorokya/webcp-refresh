@@ -1,0 +1,28 @@
+{
+  "name": "webcp-refresh",
+  "version": "1.0.0",
+  "scripts": {
+    "api": "cd api && yarn start",
+    "api:test": "cd api && yarn test",
+    "app": "cd app && yarn start",
+    "cypress:open": "yarn run cypress open",
+    "cypress:run": "yarn run cypress run",
+    "lint": "./node_modules/eslint/bin/eslint.js ."
+  },
+  "devDependencies": {
+    "babel-eslint": "10.0.3",
+    "cypress": "^3.7.0",
+    "cypress-cucumber-preprocessor": "^1.18.0",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-cypress": "^2.7.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
