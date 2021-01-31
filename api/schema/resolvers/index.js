@@ -22,8 +22,6 @@ const rootResolvers = {
         context
       );
 
-      console.log(admin);
-
       if (admin > 0) {
         const characters = await CharactersService.getAllCharacters(context);
         return characters;
