@@ -37,10 +37,10 @@ const rootResolvers = {
   Mutation: {
     login: async (_, { username, password }, context) => {
       const {
-        services: { AccountsService },
+        services: { AuthenticationService },
       } = context;
 
-      const token = await AccountsService.authenticate(
+      const token = await AuthenticationService.authenticate(
         { username, password },
         context
       );

@@ -3,7 +3,12 @@ const findAccount = async ({ username }, context) => {
     models: { Account },
   } = context;
 
-  const account = await Account.find(username);
+  const account = await Account.findOne({
+    where: {
+      username,
+    },
+  });
+
   return account;
 };
 

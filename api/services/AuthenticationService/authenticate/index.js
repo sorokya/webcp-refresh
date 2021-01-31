@@ -14,10 +14,11 @@ const result = (message, token) => ({
 
 const authenticate = async ({ username, password }, context) => {
   const {
-    models: { Account },
+    services: { AccountsService },
   } = context;
 
-  const account = await Account.find(username);
+  const account = await AccountsService.findAccount({ username }, context);
+
   if (!account || account.password !== generateHash(username, password)) {
     return result('Your login failed');
   }
