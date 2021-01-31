@@ -4,7 +4,10 @@ const authenticate = async ({ username, password }, context) => {
   } = context;
 
   const token = await Account.authenticate(username, password);
-  return token;
+  return {
+    message: token ? 'success' : 'Your login failed',
+    token,
+  };
 };
 
 module.exports = authenticate;

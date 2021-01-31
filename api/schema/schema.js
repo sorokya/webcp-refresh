@@ -1,5 +1,6 @@
 const accountSchema = require('./Account/schema');
 const characterSchema = require('./Character/schema');
+const loginResultSchema = require('./LoginResult/schema');
 
 const rootSchema = [
   `
@@ -18,11 +19,16 @@ const rootSchema = [
     login (
       username: String!
       password: String!
-    ): String
+    ): LoginResult
   }
   `,
 ];
 
-const schema = [...rootSchema, ...accountSchema, ...characterSchema];
+const schema = [
+  ...rootSchema,
+  ...accountSchema,
+  ...characterSchema,
+  ...loginResultSchema,
+];
 
 module.exports = schema;
