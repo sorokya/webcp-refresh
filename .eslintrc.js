@@ -33,7 +33,7 @@ module.exports = {
       },
     ],
     curly: ['error', 'all'],
-    'function-paren-newline': ['error', 'multiline'],
+    'function-paren-newline': 'off',
     'implicit-arrow-linebreak': 'off',
     'import/newline-after-import': 'off',
     'import/no-extraneous-dependencies': [

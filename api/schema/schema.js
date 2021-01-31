@@ -13,6 +13,13 @@ const rootSchema = [
     """
     characters: [Character]
   }
+
+  type Mutation {
+    login (
+      username: String!
+      password: String!
+    ): String
+  }
   `,
 ];
 
