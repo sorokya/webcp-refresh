@@ -17,7 +17,7 @@ const rootResolvers = {
 
       const admin = await AccountsService.getAdminRank(
         {
-          username: context.user.username,
+          username: context.user,
         },
         context
       );
@@ -28,7 +28,7 @@ const rootResolvers = {
       }
 
       const characters = await CharactersService.getCharactersForAccount(
-        { accountName: context.user.username },
+        { accountName: context.user },
         context
       );
       return characters;

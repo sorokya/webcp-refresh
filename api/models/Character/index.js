@@ -60,7 +60,6 @@ const getAll = async () => {
 const getCharactersForAccount = async (accountName) => {
   const conn = await database.createConnection();
   const rows = await conn.query(`${SelectSql} WHERE account = ?`, accountName);
-  rows.splice(rows.length, 1); // meta row
   conn.end();
   return rows;
 };
