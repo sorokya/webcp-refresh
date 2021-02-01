@@ -5,6 +5,7 @@ const { graphqlExpress } = require('apollo-server-express');
 const models = require('../models');
 const services = require('../services');
 const schema = require('../schema');
+const database = require('../database');
 
 const getUser = (req) => {
   const authHeader = req.headers.authorization;
@@ -19,11 +20,14 @@ const getUser = (req) => {
   return undefined;
 };
 
+const getDatabase = () => database.get();
+
 const buildOptions = (req, res) => ({
   context: {
     models,
     services,
     user: getUser(req),
+    getDatabase,
   },
   schema,
 });

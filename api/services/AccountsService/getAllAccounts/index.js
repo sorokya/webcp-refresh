@@ -3,7 +3,7 @@ const getAllAccounts = async (context) => {
     models: { Account },
   } = context;
 
-  const accounts = await Account.getAll();
+  const accounts = await Account(context.getDatabase()).getAll();
   return accounts;
 };
 

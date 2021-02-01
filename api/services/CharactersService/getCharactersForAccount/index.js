@@ -3,7 +3,7 @@ const getCharactersForAccount = async ({ accountName }, context) => {
     models: { Character },
   } = context;
 
-  const characters = await Character.findAll({
+  const characters = await Character(context.getDatabase()).findAll({
     where: { account: accountName },
   });
   return characters;
