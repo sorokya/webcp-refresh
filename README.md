@@ -1,9 +1,9 @@
 # WebCP Refresh
 
 This project aims to provide a "modern" web based control panel for the
-[https://github.com/eoserv/eoserv/](EOSERV) project. It should include all of
+[EOSERV](https://github.com/eoserv/eoserv/) project. It should include all of
 the existing features and functionality of it's predecessor
-[https://github.com/eoserv/webcp/](WebCP).
+[WebCP](https://github.com/eoserv/webcp/).
 
 ## Building
 
