@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
-module.exports = (sequelize) => {
-  const Account = sequelize.define(
+
+module.exports = (sequelize) =>
+  sequelize.define(
     'account',
     {
       username: {
@@ -63,6 +64,3 @@ module.exports = (sequelize) => {
       ],
     }
   );
-
-  return Account;
-};

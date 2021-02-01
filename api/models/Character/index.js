@@ -1,8 +1,8 @@
 const { DataTypes } = require('sequelize');
 
-module.exports = (sequelize) => {
-  const Character = sequelize.define(
-    'characters',
+module.exports = (sequelize) =>
+  sequelize.define(
+    'character',
     {
       name: {
         type: DataTypes.STRING(16),
@@ -235,6 +235,3 @@ module.exports = (sequelize) => {
       ],
     }
   );
-
-  return Character;
-};

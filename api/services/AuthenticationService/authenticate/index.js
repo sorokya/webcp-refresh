@@ -1,9 +1,9 @@
 const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
 
-const generateHash = (username, password) => {
+const generateHash = (username, password, salt) => {
   const hash = crypto.createHash('sha256');
-  hash.update(`${process.env.PASSWORD_SALT}${username}${password}`);
+  hash.update(`${salt}${username}${password}`);
   return hash.digest('hex');
 };
 
@@ -19,7 +19,11 @@ const authenticate = async ({ username, password }, context) => {
 
   const account = await AccountsService.findAccount({ username }, context);
 
-  if (!account || account.password !== generateHash(username, password)) {
+  if (
+    !account ||
+    account.password !==
+      generateHash(username, password, context.eoservPasswordSalt)
+  ) {
     return result('Your login failed');
   }
 

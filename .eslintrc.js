@@ -39,7 +39,12 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: ['**/*.spec.js', '**/*.steps.js', 'cypress/**/*.js'],
+        devDependencies: [
+          '**/*.spec.js',
+          '**/*.steps.js',
+          'cypress/**/*.js',
+          '**/test/**/*.js',
+        ],
       },
     ],
     'import/no-dynamic-require': 'off',

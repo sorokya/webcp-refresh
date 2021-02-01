@@ -28,6 +28,7 @@ const buildOptions = (req, res) => ({
     services,
     user: getUser(req),
     getDatabase,
+    eoservPasswordSalt: process.env.PASSWORD_SALT,
   },
   schema,
 });

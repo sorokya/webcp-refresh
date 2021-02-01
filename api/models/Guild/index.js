@@ -1,8 +1,8 @@
 const { DataTypes } = require('sequelize');
 
-module.exports = (sequelize) => {
-  const Guild = sequelize.define(
-    'guilds',
+module.exports = (sequelize) =>
+  sequelize.define(
+    'guild',
     {
       tag: {
         type: DataTypes.CHAR(3),
@@ -52,6 +52,3 @@ module.exports = (sequelize) => {
       ],
     }
   );
-
-  return Guild;
-};
